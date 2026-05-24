@@ -1,0 +1,117 @@
+.tabBar {
+  background: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 8px 16px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+}
+
+.tabBar::-webkit-scrollbar {
+  height: 4px;
+}
+
+.tabBar::-webkit-scrollbar-thumb {
+  background: #e8e8e8;
+  border-radius: 2px;
+}
+
+.tabList {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: max-content;
+}
+
+.tabItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 13px;
+  color: #8c8c8c;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  transition: all 0.2s ease;
+}
+
+.tabItem.hasClose {
+  padding-right: 28px;
+}
+
+.tabItem:hover {
+  background: #fff;
+  border-color: #d9d9d9;
+  color: #595959;
+}
+
+.tabItem.fixed {
+  color: #bfbfbf;
+  border-color: #d9d9d9;
+}
+
+.tabItem.active {
+  background: #fff;
+  color: #262626;
+  font-weight: 500;
+  border-color: #d9d9d9;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.tabTitleWrapper {
+  max-width: 100px;
+  transition: transform 0.2s ease;
+}
+
+.tabItem.hasClose:hover .tabTitleWrapper,
+.tabItem.hasClose.active .tabTitleWrapper {
+  transform: translateX(-10px);
+}
+
+.tabTitle {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.closeBtn {
+  position: absolute;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  font-size: 10px;
+  color: #8c8c8c;
+  flex-shrink: 0;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.tabItem:hover .closeBtn,
+.tabItem.active .closeBtn {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.tabItem.active .closeBtn:hover {
+  background: rgba(24, 144, 255, 0.1);
+  color: #1890ff;
+}
+
+.closeBtnPlaceholder {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}

@@ -1,0 +1,55 @@
+/* KeepAlive 最外层容器：裁剪子树在切换动画中产生的横向溢出，避免出现底部横向滚动条闪一下 */
+.keep-alive-render {
+    height: 100%;
+    min-height: 0;
+    min-width: 0;
+    overflow-x: clip;
+}
+
+/* ===== KeepAlive 缓存节点切换：只做透明度，避免与 outlet 的位移叠加导致超宽 ===== */
+.cache-component {
+    height: 100%;
+    min-width: 0;
+    opacity: 1;
+    transition: opacity 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cache-component.inactive {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* 路由内容右 → 左滑入：仅位移，避免 opacity 与超宽；动画仍在 .content 的 overflow-x: clip 内 */
+.route-outlet {
+    width: 100%;
+    min-width: 0;
+    overflow-x: clip;
+}
+
+.route-outlet--enter {
+    animation: routeSlideIn 220ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes routeSlideIn {
+    from {
+        transform: translate3d(20px, 0, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cache-component {
+        transition: none;
+    }
+
+    .cache-component.inactive {
+        opacity: 0;
+    }
+
+    .route-outlet--enter {
+        animation: none;
+    }
+}

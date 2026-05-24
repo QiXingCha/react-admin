@@ -1,0 +1,379 @@
+/* Login Page - Cursor Design System */
+
+.container {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* Left Panel - Branding */
+.leftPanel {
+  width: 45%;
+  background-color: #f7f7f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px;
+  position: relative;
+  border-right: 1px solid #e6e5e0;
+}
+
+.brandContent {
+  position: relative;
+  z-index: 1;
+}
+
+.wordmark {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.wordmarkIcon {
+  width: 40px;
+  height: 40px;
+  background-color: #f54e00;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.wordmarkText {
+  font-family: 'Inter', system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #26251e;
+  letter-spacing: -0.11px;
+}
+
+.heroHeadline {
+  font-family: 'Inter', system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 42px;
+  font-weight: 400;
+  color: #26251e;
+  letter-spacing: -0.72px;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+  max-width: 380px;
+}
+
+.heroSubtitle {
+  font-family: 'Inter', system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #5a5852;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 340px;
+}
+
+/* Decorative timeline pills */
+.timelinePills {
+  display: flex;
+  gap: 8px;
+  margin-top: 48px;
+}
+
+.timelinePill {
+  font-family: 'Inter', system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.88px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  color: #26251e;
+}
+
+.pillThinking {
+  background-color: #dfa88f;
+}
+
+.pillGrep {
+  background-color: #9fc9a2;
+}
+
+.pillRead {
+  background-color: #9fbbe0;
+}
+
+.pillEdit {
+  background-color: #c0a8dd;
+}
+
+.pillDone {
+  background-color: #c08532;
+  color: #ffffff;
+}
+
+/* IDE Mockup decoration */
+.ideDecoration {
+  position: absolute;
+  bottom: 80px;
+  left: 80px;
+  right: 80px;
+}
+
+.ideWindow {
+  background-color: #ffffff;
+  border: 1px solid #e6e5e0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ideTitleBar {
+  background-color: #fafaf7;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #e6e5e0;
+}
+
+.ideDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #e6e5e0;
+}
+
+.ideDot:nth-child(1) {
+  background-color: #cf2d56;
+}
+
+.ideDot:nth-child(2) {
+  background-color: #f5a623;
+}
+
+.ideDot:nth-child(3) {
+  background-color: #1f8a65;
+}
+
+.ideContent {
+  padding: 20px;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 13px;
+  color: #5a5852;
+  line-height: 1.6;
+}
+
+.ideContent .keyword {
+  color: #f54e00;
+}
+
+.ideContent .string {
+  color: #1f8a65;
+}
+
+.ideContent .comment {
+  color: #807d72;
+}
+
+/* Right Panel - Login Form */
+.rightPanel {
+  flex: 1;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px;
+}
+
+.loginCard {
+  width: 100%;
+  max-width: 360px;
+}
+
+.loginHeader {
+  margin-bottom: 32px;
+}
+
+.loginTitle {
+  font-family: 'Inter', system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  color: #26251e;
+  letter-spacing: -0.325px;
+  line-height: 1.25;
+  margin: 0 0 8px 0;
+}
+
+.loginDesc {
+  font-family: 'Inter', system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #5a5852;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inputLabel {
+  font-family: 'Inter', system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #26251e;
+}
+
+.input {
+  height: 44px;
+  padding: 0 16px;
+  background-color: #ffffff;
+  border: 1px solid #e6e5e0;
+  border-radius: 8px;
+  font-family: 'Inter', system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #26251e;
+  transition: border-color 0.15s ease;
+}
+
+.input::placeholder {
+  color: #807d72;
+}
+
+.input:hover {
+  border-color: #cfcdc4;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #f54e00;
+}
+
+/* Options row */
+.optionsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.rememberMe {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.rememberMe input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #f54e00;
+  cursor: pointer;
+}
+
+.rememberMe span {
+  font-family: 'Inter', system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #5a5852;
+}
+
+.forgotLink {
+  font-family: 'Inter', system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #26251e;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.forgotLink:hover {
+  color: #f54e00;
+}
+
+/* Submit button */
+.submitBtn {
+  width: 100%;
+  height: 40px;
+  margin-top: 8px;
+  padding: 0 18px;
+  background-color: #f54e00;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Inter', system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.submitBtn:hover {
+  background-color: #d04200;
+}
+
+.submitBtn:active {
+  background-color: #d04200;
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Sign up link */
+.signupRow {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.signupRow span {
+  font-family: 'Inter', system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #5a5852;
+}
+
+.signupRow a {
+  font-family: 'Inter', system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #f54e00;
+  text-decoration: none;
+  margin-left: 4px;
+  transition: color 0.15s ease;
+}
+
+.signupRow a:hover {
+  color: #d04200;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .leftPanel {
+    width: 100%;
+    min-height: 280px;
+    padding: 48px 32px;
+    border-right: none;
+    border-bottom: 1px solid #e6e5e0;
+  }
+
+  .heroHeadline {
+    font-size: 32px;
+  }
+
+  .ideDecoration {
+    display: none;
+  }
+
+  .rightPanel {
+    padding: 48px 32px;
+  }
+}
